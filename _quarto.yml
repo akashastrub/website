@@ -1,0 +1,35 @@
+project:
+  type: website
+
+website:
+  title: "Akasha Strub"
+  favicon: "images/headshot_circular.jpg"
+  navbar:
+    
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - href: resume.qmd
+        text: Resume
+        
+    right:
+      - icon: linkedin
+        href: https://linkedin.com/in/akashastrub
+        aria-label: Quarto LinkedIn
+      - icon: github
+        href: https://github.com/akashastrub/
+        aria-label: Quarto Github
+        
+  search: 
+    location: navbar
+    type: overlay
+    
+format:
+  html:
+    theme: litera
+    css: styles.css
+
+editor: visual
+
