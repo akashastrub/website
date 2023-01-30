@@ -3,7 +3,7 @@ project:
 
 website:
   title: "Akasha Strub"
-  favicon: "images/headshot_circular.jpg"
+  favicon: "images/headshot_circular.png"
   navbar:
     
     left:
