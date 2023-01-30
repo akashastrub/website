@@ -8,7 +8,7 @@ website:
     
     left:
       - href: index.qmd
-        text: Home
+        text: Blog
       - href: about.qmd
         text: About
       - href: resume.qmd
@@ -21,6 +21,9 @@ website:
       - icon: github
         href: https://github.com/akashastrub/
         aria-label: Quarto Github
+      - icon: envelope
+        href: mailto:akashastrub@gmail.com
+        aria-label: Quarto Email
         
   search: 
     location: navbar

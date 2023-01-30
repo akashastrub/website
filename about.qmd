@@ -13,4 +13,4 @@ about:
       href: https://github.com/akashastrub/
 ---
 
-Welcome to my personal website! I'm Akasha, a data scientist currently living and working in Copenhagen, Denmark. I first developed a passion for creating value from healthcare data while studying at the University of Oxford. Since then, I joined Novo Nordisk on a 2-year talent & leadership development program, giving me the opportunity to work across different areas of the pharmaceutical value chain. My current work mainly focuses on the Digital Health space.
+I'm Akasha, a data scientist currently working in Copenhagen, Denmark. I first developed a passion for creating value from healthcare data while studying at the University of Oxford. Since then, I joined Novo Nordisk on a 2-year talent & leadership development program, giving me the opportunity to work across different areas of the pharmaceutical value chain. My current work mainly focuses on the Digital Health space.
