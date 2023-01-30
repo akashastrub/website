@@ -1,1 +1,1 @@
-Sitemap: https://akashastrub.github.io/website/sitemap.xml
+Sitemap: https://github.com/akashastrub/website/sitemap.xml
