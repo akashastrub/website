@@ -1,12 +1,19 @@
 ---
 title: "Welcome To My Blog"
-author: "Akasha Strub"
-date: "2023-01-28"
+date: "2023-02-18"
 categories: [news]
 ---
 
-This is the first post in a Quarto blog. Welcome!
+![](thumbnail.jpg){width=1005}
 
-![](thumbnail.jpg)
+Before I left Italy to pursue a Master's degree in Engineering at Oxford University, I was intent on keeping a tab on what it was that I was learning from the "city of dreaming spires." And I did. Four years later, I moved to Copenhagen for my first full-time position at Novo Nordisk with the same intention. And I sort of did. 8 months later, I moved to Switzerland, and it's safe to say the "9 to 5" took the best of me, and I'm sure there are lessons I'm already beginning to forget. So... welcome to my blog!
 
-Since this post doesn't specify an explicit `image`, the first image in the post will be used in the listing page of posts.
+The purpose of this blog is both to provide an outlet for me to consolidate my learning journey, and to share it with you with the hope that you can hopefully also learn something new. In terms of content, my current work focuses on the pharmaceutical space, but anything that inspires me to write and code in my free time will end up here. Three examples currently come to mind:
+
+1.  **Bayesian statistics**: I often find the Bayesian framework more intuitive and useful than the more traditional frequentist framework. I can finally write about it here instead of bothering my colleagues about it.
+
+2.  **Personal finance**: Given I seem to only choose to live in countries with strange currencies, I have created a personal accounting tool that helps expats keep a tab on their income and expenses. Friends & family already use this, but I will share it (and the development process) more broadly here.
+
+3.  **Causal inference**: How do we use our knowledge, and statistics, to draw *causal* conclusions based on data? This is both the bread and butter of a lot of work in the pharmaceutical industry, as well as a very stimulating field intellectually.
+
+Of course, as time goes by, new ideas on pharma and/or data science will pop up, as will more purely intellectual pursuits (for example, book reviews). These will provide the content for my (un)ambitious goal of posting at least once per quarter, and I'm excited to put pen to paper (or rather, fingers to keyboard) and begin!
