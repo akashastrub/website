@@ -4,16 +4,14 @@ date: "2023-02-18"
 categories: [news]
 ---
 
-![](thumbnail.jpg){width=1005}
+![](thumbnail.jpg){width="1005"}
 
-Before I left Italy to pursue a Master's degree in Engineering at Oxford University, I was intent on keeping a tab on what it was that I was learning from the "city of dreaming spires." And I did. Four years later, I moved to Copenhagen for my first full-time position at Novo Nordisk with the same intention. And I sort of did. 8 months later, I moved to Switzerland, and it's safe to say the "9 to 5" took the best of me, and I'm sure there are lessons I'm already beginning to forget. So... welcome to my blog!
-
-The purpose of this blog is both to provide an outlet for me to consolidate my learning journey, and to share it with you with the hope that you can hopefully also learn something new. In terms of content, my current work focuses on the pharmaceutical space, but anything that inspires me to write and code in my free time will end up here. Three examples currently come to mind:
+Hello and welcome to my blog! The intention with this blog is both to provide an outlet for myself to consolidate my learning, and to share it with you in the hope that you can hopefully also learn something new. In terms of content, my current work focuses on the pharmaceutical space, but anything that inspires me to write and code in my free time will end up here. Three initial themes are currently in the pipeline:
 
 1.  **Bayesian statistics**: I often find the Bayesian framework more intuitive and useful than the more traditional frequentist framework. I can finally write about it here instead of bothering my colleagues about it.
 
-2.  **Personal finance**: Given I seem to only choose to live in countries with strange currencies, I have created a personal accounting tool that helps expats keep a tab on their income and expenses. Friends & family already use this, but I will share it (and the development process) more broadly here.
+2.  **Personal finance**: Given I seem to only move to countries with different currencies to the one I was previously in, I have created a personal accounting tool that helps expats keep a tab on their income and expenses across different currencies. Friends & family already use this, but I will share it (and the development process) more broadly here.
 
-3.  **Causal inference**: How do we use our knowledge, and statistics, to draw *causal* conclusions based on data? This is both the bread and butter of a lot of work in the pharmaceutical industry, as well as a very stimulating field intellectually.
+3.  **Causal inference**: How do we use our knowledge, and statistics, to draw *causal* conclusions based on data? This is both the bread and butter of a lot of work in the pharmaceutical industry, as well as a very stimulating field in and of itself.
 
-Of course, as time goes by, new ideas on pharma and/or data science will pop up, as will more purely intellectual pursuits (for example, book reviews). These will provide the content for my (un)ambitious goal of posting at least once per quarter, and I'm excited to put pen to paper (or rather, fingers to keyboard) and begin!
+Of course, as time goes by, new ideas will pop up, but it's safe to say these will mainly focus on the pharmaceutical industry, data science, ML/MLOps, and the intersection of all of these. There will also be a few purely intellectual pursuits, such as book reviews. These will provide the content for my (un)ambitious goal of posting at least once per quarter, and I'm excited to put pen to paper (or rather, fingers to keyboard) and begin. Stay tuned.
