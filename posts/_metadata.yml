@@ -6,3 +6,8 @@ freeze: true
 
 # Enable banner style title blocks
 title-block-banner: true
+
+# Apple theme.css e.g. for text alignment
+format:
+  html: 
+    css: theme.css
