@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://github.com/akashastrub/website/posts/welcome/index.html</loc>
-    <lastmod>2023-02-19T17:08:24.982Z</lastmod>
-  </url>
-  <url>
-    <loc>https://github.com/akashastrub/website/about.html</loc>
-    <lastmod>2023-02-19T17:08:25.818Z</lastmod>
+    <loc>https://github.com/akashastrub/website/resume.html</loc>
+    <lastmod>2023-12-15T02:41:44.121Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/akashastrub/website/index.html</loc>
-    <lastmod>2023-02-19T17:08:26.190Z</lastmod>
+    <lastmod>2023-12-15T02:41:43.605Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/akashastrub/website/resume.html</loc>
-    <lastmod>2023-02-19T17:08:26.518Z</lastmod>
+    <loc>https://github.com/akashastrub/website/about.html</loc>
+    <lastmod>2023-12-15T02:41:43.009Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/akashastrub/website/posts/welcome/index.html</loc>
+    <lastmod>2023-12-15T02:41:43.889Z</lastmod>
   </url>
 </urlset>
