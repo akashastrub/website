@@ -1,5 +1,5 @@
 ---
-title: "Akasha Strub"
+title: "About"
 image: "images/headshot.jpg"
 about:
   template: jolla
@@ -16,4 +16,4 @@ about:
       href: mailto:akashastrub@gmail.com
 ---
 
-Hi! I'm Akasha, a data scientist currently working at [Novo Nordisk](https://www.novonordisk.com/) in Copenhagen, Denmark. My current work focuses on the Digital Health space, but this personal website focuses on anything that inspires me to code in my free time.
+Hi! I'm Akasha, a data scientist currently working at [Novo Nordisk](https://www.novonordisk.com/) in Boston, USA. My current work focuses on the Digital Health space, but this personal website focuses on anything that inspires me to write in my free time.
