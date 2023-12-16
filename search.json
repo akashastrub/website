@@ -1,17 +1,17 @@
 [
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
-    "section": "",
-    "text": "Hello and welcome to my blog! The intention with this blog is both to provide an outlet for myself to consolidate my learning, and to share it with you in the hope that you can hopefully also learn something new. In terms of content, my current work focuses on the pharmaceutical space, but anything that inspires me to write and code in my free time will end up here. Three initial themes are currently in the pipeline:\n\nBayesian statistics: I often find the Bayesian framework more intuitive and useful than the more traditional frequentist framework. I can finally write about it here instead of bothering my colleagues about it.\nPersonal finance: Given I seem to only move to countries with different currencies to the one I was previously in, I have created a personal accounting tool that helps expats keep a tab on their income and expenses across different currencies. Friends & family already use this, but I will share it (and the development process) more broadly here.\nCausal inference: How do we use our knowledge, and statistics, to draw causal conclusions based on data? This is both the bread and butter of a lot of work in the pharmaceutical industry, as well as a very stimulating field in and of itself.\n\nOf course, as time goes by, new ideas will pop up, but it’s safe to say these will mainly focus on the pharmaceutical industry, data science, ML/MLOps, and the intersection of all of these. There will also be a few purely intellectual pursuits, such as book reviews. These will provide the content for my (un)ambitious goal of posting at least once per quarter, and I’m excited to put pen to paper (or rather, fingers to keyboard) and begin. Stay tuned."
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
     "text": "Hi! I’m Akasha, a data scientist currently working at Novo Nordisk in Boston, USA. My current work focuses on the Digital Health space, but this personal website focuses on anything that inspires me to write in my free time."
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "Hello and welcome to my blog! The intention with this blog is both to provide an outlet for myself to consolidate my learning, and to share it with you in the hope that you can hopefully also learn something new. In terms of content, my current work focuses on the pharmaceutical space, but anything that inspires me to write and code in my free time will end up here. Three initial themes are currently in the pipeline:\n\nBayesian statistics: I often find the Bayesian framework more intuitive and useful than the more traditional frequentist framework. I can finally write about it here instead of bothering my colleagues about it.\nPersonal finance: Given I seem to only move to countries with different currencies to the one I was previously in, I have created a personal accounting tool that helps expats keep a tab on their income and expenses across different currencies. Friends & family already use this, but I will share it (and the development process) more broadly here.\nCausal inference: How do we use our knowledge, and statistics, to draw causal conclusions based on data? This is both the bread and butter of a lot of work in the pharmaceutical industry, as well as a very stimulating field in and of itself.\n\nOf course, as time goes by, new ideas will pop up, but it’s safe to say these will mainly focus on the pharmaceutical industry, data science, ML/MLOps, and the intersection of all of these. There will also be a few purely intellectual pursuits, such as book reviews. These will provide the content for my (un)ambitious goal of posting at least once per quarter, and I’m excited to put pen to paper (or rather, fingers to keyboard) and begin. Stay tuned."
   },
   {
     "objectID": "index.html",
