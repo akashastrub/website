@@ -55,3 +55,19 @@ The `execute: freeze: auto` option in the `_quarto.yml` file ensures the `_freez
 -   The `.github/workflows/publish.yaml` file invokes the required GitHub Action when pushing code to the `main` branch.
 
 -   The `_site` folder is automatically created when rendering the blog locally, but is contained in the gitignore folder as it is redundant for the GitHub Action pipeline.
+
+## Publishing the blog
+
+The blog is published using GitHub Pages. Simply pushing a commit to main will invoke the CI pipeline, which will use the `gh-pages` branch to publish (**this branch should not be modified manually**). As a second step, the default URL (`akashastrub-github.io`) is then routed to the desired URL (`www.akashastrub.com`).
+
+### Publishing to GitHub Pages
+
+[This](https://quarto.org/docs/publishing/github-pages.html#publish-command) is the best resource to revisit the process by which the blog is being published via GitHub Actions/Pages. Visit `Settings` \> `Pages` to take a look under the hood and verify the status of your website.
+
+### Routing to Custom domain
+
+The `www.akashastrub.com` domain name was licensed using [Google Domains](https://domains.google.com/). Mapping the website from the default URL to the custom URL entails two steps:
+
+1.  Configure your subdomain on [GitHub](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain).
+
+2.  Creating a `CNAME` record that points your custom domain to the default domain for your site on your DNS provider. Click `Manage domains` on your [Google Domains](https://domains.google/) \> `Manage` (under your specific domain) \> `DNS` \> `Custom records`. See link from Step 1 for details.
