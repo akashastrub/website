@@ -1,0 +1,78 @@
+---
+title: "Welcome To My Blog"
+date: "2023-02-18"
+categories: [news]
+---
+
+
+topics to cover from course 1:
+
+* if NN is large enough, the more data the better. With traditional ML/stats, there is sort of an upper limit on this, regardless of amount of data fed into model
+* gradient descent and convex cost functions
+* how does gradient descent work when the gradient cannot be derived analytically? some empirical, linear approximation techniques
+* steps to crate a NN: 1) create an architecture, 2) initialise parameters (random and small, NEVER 0 as it does not train!), 3) loop over: forward prop (compute cost), backward prop (compute gradients), update parameters (gradient descent)
+* all nodes in layer just do two things: linear combination of inputs (times W and plus b), and apply an activation function (TBD)
+* activation functions are essential to introducing non-linearity in NN's
+* how does NN work intuitively? When it's deep, we often think of initial layers as extracting low-level features, and later layers progressively grouping these features into higher-level features (e.g. edge, eye, face, identity)
+* hyperparameters = parameters that AFFECT parameters W and b
+
+topics to cover from course 2:
+
+* plenty of choices/dials to choose from when creating a NN. See this as an iterative loop: idea > code > experiment - over and over again
+* in order to iterate quickly, you need to get a good setup going with your data: train/dev/test. DEV is used for decision making/comparing models. TEST is totally new & unbiased. THIS IS IMPORTANT AND YOU'VE MESSED IT UP BEFORE.
+* dev and test, must (obvs) come from same distribution
+* Ng talks about orthogonalization. Look more into this, see what it's about, and DRAW YOUR OWN OPINION.
+* how to evaluate "avoidable bias" and "variance" in model? human perf/bayes vs training perf = bias. training/dev vs testing perf = variance.
+* DL accommodates traditional regularization e.g. L1 or L2 norm of |W| in cost function. L2 norm reg also referred to as "weight decay" due to maths arising when doing grad descent. Why does this work? smaller W means simpler model...
+* DL also has "dropout reg" where nodes turned on/off randomly (inverted dropout). works because W and b no longer rely on a few nodes, therefore more spread out, therefore smaller |W| (can be shown this is related to L2 reg). NB this means no more easy calc of "J".
+* 2 more reg techniques: 1) data augmentation, 2) early stopping
+* like in ML, always normalise input features in train and test (mean and var == 1)
+* vanishing/exploring gradients happen when vals are too big. therefore, in addition to normalising input features, we also set |W| to specific magnitudes (AND sometimes batch norm = normalise values at every forward prop)
+* gradient checking = compare empirical grad vs analytically calculated grad
+
+* minibatch grad descent = split up training set into "mini-batches" and update params (via grad descent) after every mini-batch. This means you don't go through all training examples for each iteration of gradient descent. Makes things more efficient when you have large # of training examples. EPOCH = when each training sample is used ONCE. mini-batch too small > stochastic and inefficient. too big > ineff. Just right is in the middle (eg 2^9, 2^10, etc). BUT minibatch introduces more noise in process, therefore often use optim algos that smoothen that out (see below)
+* exponentially weighted moving average = sequence approximation. BASIS for upcoming optim algos
+* gradient descent with momentum = using grad descent where grads use EWMA before updating params
+* rmsprop = much like grad descent with momentum, with some minor adjustments (sq and then sqrt)
+* ADAM = adaptive movement estimation = combo of momentum + rmsprop that works v well. 
+* learning rate decay = reduce learning rate as progress through learning process. also improves with learning process. e.g. manual, stepwise, equations, etc.
+* given NN operate in high dimensional space, local optima are less of an issue when running grad descent :)
+
+* we have plenty of hyperparameters : learning rate, beta (if using momentum, adam, etc.), # hidden units, minibatch size, # layers, learning rate decay, etc. HOW DO WE CHOOSE THEM? not grid. coarse to fine could also be ok. in reality, bayesian optimisation techniques could be better. depending on nature of hyperparam, log scale could be useful for sampling!
+* sometimes in DL, models take so long to train that IN PRACTICE, you don't just train a bunch of models like you would in ML, and choose the best one (caviar). Sometimes in DL, you just train one model for a while and babysit it (see how it progressed, tinker with values, etc.) (PANDA)
+* batch norm = normalising values IN NN layer, much like we normalise input vals, to facilitate learning. sometimes we add a new mean and variance (learnable parameters) as this speeds up learning process further. THIS IS DONE AFTER LINEAR COMBO, BUT PRIOR TO ACTIVATION FUNCTION. This adds another step to learning process (within forward prop). Why does it work? keeps distribution tighter, therefore stabilises learning process quicker. This is usually done in conjunction with minibatch. When testing/using a NN trained using batch norm, we need to estimate mean and std for each layer - either get it from training samples, or estimate it e..g EWMA
+* in binary classificaiton, output layer = SIGMOID. in multiclass, output layer = SOFTMAX. everything else works the same of course with minor adjustments
+
+topics to cover from course 3: 
+
+* another rant about orthogonalization. look more into it
+* Ng proposes going through things in silos: 1) fit training well, 2) fit dev well, 3) fit test well, 4) perform well in real world
+* Ng proposes die hard pragmatism: SINGLE NUMBER EVALUATION METRIC. if you can't boil it down to one, one SNEM (optimise for that), and some min thresholds (satisfice for those). 
+* dev and test set must reflect data you consider it important to do well on.
+* how to choose train/dev/test split? Remember what each are useful for and choose a numebr based on that. 
+* when evaluation metrics do not rank models in your preferred order, change metric or dev/test set. WEIGHTS in evaluation cost function can be a good tool for this.
+* human level perf can provide insight/proxy for bayes optimal error. humav vs train = bias. train vs dev/test = variance
+
+* error analysis = manually assessing mistakes algo is making. counting what % of dev errors can be attributed to a certain problem helps prioritising. 
+* incorrectly labelled sample = when labbeled data has wrong label. if RANDOM in training, fine. if SYSTEMATIC in training, you have an issue. if in dev/test, see what %. whatever you do (fix vs no fix) in dev, you must also do in test. 
+* DL works well with lots of data > therefore we often add more data in training set, with diff distribution than dev/test. if this is the case, diff in perf between TRAIN error vs DEV/TEST error = due to variance AND/OR "data mismatch" (different distributions). Therefore, split data into train/training-dev/dev/test, where training-dev has same distribution as training. Now you can compare perf on all groups and distinguish between variance vs data mismatch changes in perf. 
+* how to mitigate data mismatch? 1) manual error analysis to identify key differences driving errors between train-dev vs dev. 2) attempt to make training data more similar to dev data, somehow (e.g. artificial data synthesis?)
+
+* transfer learning = training NN on task A, then using that NN as a basis to TRANSFER that into a desired task B. e.g. 1) reinitialise last few layers and train on your own data. or 2) if you have even more data, do as (1), but - without reinitialising - also allow all other layers' parameters to change in grad descent. task A training = pre-training. task B training in format (2) = FINE-tuning. A & B data must be same modality, and you must have more data for A than for B, for this to be useful. 
+* multitask learning = training NN to do many tasks. can give better perf than doing each in isolation. a bunch of sigmoid functions on last layer all operate individually to allow this (different to softmax). tasks must benefit from having shared lower-level functions, and usually similar amount of data for all tasks, for this to be useful. NB multitask learning is RARE. 
+* end-to-end deep learning = NN that goes from raw > complex output, bypassing processes that could have been their own NN outright e.g. full body pic > ID instead of full body pic > identify face > ID. we need a lot of data for E-E DL. E-E not ideal if handmade features could be v useful for perf.
+
+DONE
+
+
+
+
+
+
+
+
+
+
+
+
+
