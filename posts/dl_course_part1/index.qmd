@@ -1,24 +1,22 @@
 ---
 title: "Deep Learning Specialisation - Part 1"
 date: "2024-02-12"
-categories: [learning]
+categories: [deep learning]
 ---
 
 ** Introduction **
 
-A few months ago, when looking for a course to consolidate and extend my knowledge of Deep Learning, I came across various options: Ian Goodfellow's book, Jeremy Howard's fastai course, Andrew Ng's Deep Learning Specialization course - the list goes on and on. What I didn't come across was different people's thoughts for where best to start (for such a mature, important field, the tuition options are scattered). In this 2-part series of blogposts, I aim to chip away at that and provide my views on the course I ended up going for: Andrew Ng's Deep Learning Specialization. 
+A few months ago, when looking for a course to consolidate and extend my knowledge of Deep Learning, I came across various options: Ian Goodfellow's book, Jeremy Howard's fastai course, Andrew Ng's Deep Learning Specialization course - the list goes on and on. What I didn't come across was different people's thoughts for where best to start (for such a mature, important field, the options are scattered). In this 2-part series of blogposts, I aim to chip away at that and provide my views on the course I ended up going for: Andrew Ng's Deep Learning Specialization. 
 
 ** Motivation **
 
-I will not bore the reader with reasons why Deep Learning is a field worthy of one's attention. All you need to do is open the news to see the effects large neural networks (most recently, language models) are having on society in multiple ways. Rather, I will dial in on what some of my personal motivations were prior to taking this course: 
+I will not bore the reader with reasons why Deep Learning is a field worthy of one's attention. All you need to do is open the news to see the effects large neural networks (most recently, language models) are having on society (and tech companies' market capitalizations) in multiple ways. Rather, I will dial in on what some of my personal motivations were prior to taking this course: 
 
 1. Throughout my time working in the field of Data Science, problems have been centered around data availability, value creation, delivery, etc (all very important elements of a project). Most recently, I have found it of great value to explicitly agree with stakeholders on the true goal of a data science problem: are we looking for inference, or for prediction? If you think about your problem hard enough, it will likely fall into one of two categories, though in some cases the lines might be blurred. When it comes to a "pure" prediction problem, where intuition & understanding are unnecessary, neural networks are tough to beat. Why limit oneself in such cases? 
 
-2. Until recently, I had only dabbled in neural networks as my background is predominantly in statistics (both frequentist and, more excitingly, Bayesian) and traditional Machine Learning. Frankly, until recently, I believed that other than in well-defined prediction problems, neural networks were limited. However, I believe that the emergent properties we're seeing in today's LLMs have proven me wrong. With enough data and hyperparameters thrown at the problem, maybe we will be able to infer causality and run inference exercises using such tools. As such, I have chosen to focus some of my time and attention to this field. 
+2. Until recently, I had only dabbled in neural networks as my background is predominantly in statistics (both frequentist and, more excitingly, Bayesian) and traditional Machine Learning. Frankly, until recently, I believed that other than in well-defined prediction problems, neural networks were limited. However, I believe that the emergent properties we're seeing in today's LLMs have proven me wrong. With enough data and hyperparameters thrown at the problem, maybe we will be able to infer causality from data, and run inference exercises using such tools. 
 
 3. Working with a Deep Learning framework gives the practitioner so many options. Compared to traditional statistical and ML techniques, neural networks can be designed in infinite ways and can provide vast flexibility to fit data. This can of course make it even trickier to avoid overfitting, but it also provides data scientists with the creative outlet to iterate over various different models. 
-
-[UNSURE OF THE LAST POINT]
 
 ** Course Content **
 
@@ -32,13 +30,11 @@ The Deep Learning Specialization is divided into 5 courses:
 
 The first three courses, which we will discuss in this post, cover the basics of Deep Learning. All of what is covered here applies to every and any neural network you may train, whether than be a convolutional or sequential model, on structured or unstructured data, etc. The last two courses go deep into arguably the two most important applications of deep learning today: Convolutional NN/Computer Vision, and Sequence Models/Language/Time series, and are covered in Part 2. So, what do courses 1 to 3 cover?
 
-[GO OVER THE BASICS FROM THE LIST BELOW. INCLUDE DISCUSSIONS ON ORTHOGONALIZATION HERE]
+Course 1 - Neural Networks and Deep Learning - introduces neural networks building upon simple machine learning algorithms, such as logistic regression. It proceeds to discuss some of the intuition we have built up as to how these models work, as well as introducing gradient descent, and how that fits into one forward/backward propagation learning pass. The iterative nature of training performant neural networks is highlightec from the get go. 
 
-* Intuition behind Neural Networks: why they work, how they differ from stats/ML frameworks
-* High-level flow for creating a NN: create an architecture, initialise parameters, train the network (look over forward prop and backward prop + gradient descent), and most importantly of all... ITERATE
-* The simple mathematical operations of single nodes: linear combination and "activation"
+The second course - Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization - starts by covering a variety of regularization techniques, namely L1, L2 (weight decay), dropout regularization, data augmentation, and early stopping. The pros and cons of minibatching are introduced, which segway nicely into optimisation techniques. Ng covers gradient descent, takes a relevant tangent to walk through exponentially weighted moving averages, and ties the two together to describe gradient descent with momentum. RMSProp, ADAM, and finally learning rate decay are also discussed. Some of the nuance attributed with these techniques is discussed, such as exploding/vanishing gradients, to introduce gradcheck. One of the selling points of this course, in my opinion, is the valuable qualitative discussions Ng covers in between technical topics. For example, the course covers techniques to train high performance models when training multiple and choosing the best one, as is conventinal in ML, is simply not feasible. The notion of "caviar" - laying plenty of eggs and choosing one, like fish, versus "panda" - having a single child and course correcting (changing hyperparameters) as they progress, proved to be an engaging way to introduce this concept. One surprising concept Ng touched upon in Course 2 was "orthogonalization". In this setting, Ng introduces the concept in an attempt to have us view different goals we work towards when building a neural network as orthogonal e.g. achieving the highest performance possible on the training set, versus extending that to also apply to the training set (ensuring we haven't produced a high variance, overfit model). He encourages the pursuit of each individually, which I appreciate would make things easier, but is simply not how any model works. Bias and variance are closely entwined properties of a model and must be treated as such. Removing that layer of abstraction, to me, seemed outrageous. 
 
-* 
+Finally, in course 3 - Structuring ML Projects - Ng hones in on some of his reflections and pragmatic insights from having worked on applied Deep Learning projects for decades. This course is arguably the one that provides the most value across all branches of data science, as it extends nicely to any statistical/ML techniques one may implement. Evaluation metrics, error analysis, mislabelled data, and data mismatch are just some of the topics Ng covers here. Transfer learning, fine-tuning, multi-task learning, and end-to-end deep learning are also introduced. 
 
 ** Reflections **
 
@@ -49,6 +45,8 @@ Further, there are elements of course 3, Structuring Machine Learning Projects, 
 Finally, as an engineer by training, I was pleasantly surprised at exactly how empirical even the top of the line techniques can be in Deep Learning. Whether we're talking model architectures, optimisation techniques, learning decay, etc., most of the topics introduced in this course are simply popular due to the impressive results they bring about. The Deep Learning academic community is not obsessed with finding theoretical explanations as to why things work, they just let empirical results guide them. The pro? It is easy to get up to speed with the techniques needed to create a state-of-the-art network. The cons? Who knows, we might find out about these one day...
 
 As companies like Meta continue to roll out massive open-source networks such as Llama7B, one important skill within the Deep Learning space that will be important to have will simply be to be able to translate such models to one's specific use case. Most companies do not have the resources to throw at training such a model, and likely never will. The AI winners, among the monopoly-free businesses that make up the bulk of the world's economy, will be the companies that can leverage such models regardless. Transfer learning comes to mind, as well as other more niche techniques, such as RAG for LLMs. Ng covers these briefly, but I believe their importance is ever-increasing. 
+
+
 
 
 
@@ -125,3 +123,7 @@ topics to cover from course 3:
 * transfer learning = training NN on task A, then using that NN as a basis to TRANSFER that into a desired task B. e.g. 1) reinitialise last few layers and train on your own data. or 2) if you have even more data, do as (1), but - without reinitialising - also allow all other layers' parameters to change in grad descent. task A training = pre-training. task B training in format (2) = FINE-tuning. A & B data must be same modality, and you must have more data for A than for B, for this to be useful. 
 * multitask learning = training NN to do many tasks. can give better perf than doing each in isolation. a bunch of sigmoid functions on last layer all operate individually to allow this (different to softmax). tasks must benefit from having shared lower-level functions, and usually similar amount of data for all tasks, for this to be useful. NB multitask learning is RARE. 
 * end-to-end deep learning = NN that goes from raw > complex output, bypassing processes that could have been their own NN outright e.g. full body pic > ID instead of full body pic > identify face > ID. we need a lot of data for E-E DL. E-E not ideal if handmade features could be v useful for perf.
+
+NOTES: 
+
+https://www.assemblyai.com/blog/pytorch-vs-tensorflow-in-2023/
