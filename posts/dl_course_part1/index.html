@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2024-02-12">
 
-<title>Akasha Strub - Blog</title>
+<title>Akasha Strub - Deep Learning Specialisation - Part 1</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +24,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/headshot_circular.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/headshot_circular.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,77 +67,20 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="../theme.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Akasha Strub</span>
     </a>
   </div>
@@ -149,11 +91,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -183,104 +125,98 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Blog</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Deep Learning Specialisation - Part 1</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">deep learning</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">February 12, 2024</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="deep learning">deep learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>A few months ago, I embarked on a quest to consolidate and extend my knowledge of Deep Learning. I was presented with a plethora of options, ranging from Ian Goodfellow’s Deep Learning <a href="https://www.deeplearningbook.org/">book</a> to Jeremy Howard’s <a href="https://course.fast.ai/">fastai course</a>, and Andrew Ng’s <a href="https://www.coursera.org/specializations/deep-learning#credits">Deep Learning Specialization course</a>, among others. However, I found a lack of consolidated opinions on the best starting point in this mature and crucial field. In this two-part blog series, I aim to fill that gap by sharing my insights on the course I eventually chose: Andrew Ng’s Deep Learning Specialization.</p>
+</section>
+<section id="motivation" class="level1">
+<h1>Motivation</h1>
+<p>Rather than reiterating the significance of Deep Learning — a fact that is evident from its impact on society, and of course the recent increases in tech companies’ market capitalizations — I will focus on my personal motivations for undertaking this course:</p>
+<p>In my experience as a Data Scientist, the crux of the problems often revolves around data availability, value creation, and delivery. However, I have recently found it invaluable to align with stakeholders on the core objective of a data science problem: are we seeking inference or prediction? Upon careful consideration, most problems fall into one of these categories, though the lines can occasionally be blurred. When it comes to “pure” prediction problems, where understanding and intuition are secondary, neural networks are often an unbeatable choice if the data is plentiful. Why should one restrict oneself?</p>
+<p>My background is primarily in statistics and traditional Machine Learning. Until recently, I had only dabbled in neural networks, viewing them as limited except in well-defined prediction problems. However, the emergent properties of today’s LLMs have challenged this belief. With sufficient data and hyperparameters, we might even infer causality from data and conduct inference exercises using these tools.</p>
+<p>Working with a Deep Learning framework offers a wide range of options. Compared to traditional statistical and ML techniques, neural networks offer infinite design possibilities and immense flexibility to fit data. This can make it challenging to work with, but it also gives data scientists a creative platform to experiment with various models.</p>
+</section>
+<section id="course-content" class="level1">
+<h1>Course Content</h1>
+<p>The Deep Learning Specialization is structured into five courses:</p>
+<ol type="1">
+<li>Neural Networks and Deep Learning</li>
+<li>Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization</li>
+<li>Structuring Machine Learning Projects</li>
+<li>Convolutional Neural Networks</li>
+<li>Sequence Models</li>
+</ol>
+<p>The first three courses, which I will discuss in this post, lay the foundation of Deep Learning. The principles covered here apply to any neural network you might train, regardless of the architecture type, or data modality. The final two courses delve into two critical applications of deep learning today: Convolutional Neural Nets &amp; Computer Vision, and Sequence Models (encompassing Language &amp; Temporal data), which I will cover in Part 2. So, what do the first three courses entail?</p>
+<section id="course-1" class="level3">
+<h3 class="anchored" data-anchor-id="course-1">Course 1</h3>
+<p>Course 1, Neural Networks and Deep Learning, begins by introducing neural networks based on simple machine learning algorithms like logistic regression. It then delves into the intuition behind these models, introduces gradient descent, and explains how it fits into one forward/backward propagation learning pass. The iterative nature of training efficient neural networks is emphasized from the outset.</p>
+</section>
+<section id="course-2" class="level3">
+<h3 class="anchored" data-anchor-id="course-2">Course 2</h3>
+<p>Course 2, Improving Deep Neural Networks: Hyperparameter Tuning, Regularization, and Optimization, commences with a comprehensive discussion on various regularization techniques such as L1, L2 (weight decay), dropout regularization, data augmentation, and early stopping. The pros and cons of minibatching are introduced, which segways nicely into optimisation techniques, discussing gradient descent, exponentially weighted moving averages, and tying these together to describe gradient descent with momentum. RMSProp, ADAM, and learning rate decay are also discussed. The course also touches upon the nuances associated with these techniques, such as exploding/vanishing gradients, and introduces gradcheck. The course stands out for its valuable qualitative discussions interspersed between technical topics. For example, Ng introduces the unconventional concept of “orthogonalization,” encouraging us to view different goals (such as minimising bias vs minimising variance) in building a neural network as orthogonal, and to treat them as such. Granted, in a Deep Learning model, the direct correlation between these two properties might be less obvious than in more traditional techniques, but at least to me, that seemed farfetched.</p>
+</section>
+<section id="course-3" class="level3">
+<h3 class="anchored" data-anchor-id="course-3">Course 3</h3>
+<p>Course 3, Structuring ML Projects, is where Ng shares his practical insights from decades of experience in applied Deep Learning projects. This course extends to any statistical/ML techniques one might implement, covering topics like evaluation metrics, error analysis, mislabeled data, and data mismatch. It also introduces transfer learning, fine-tuning, multi-task learning, and end-to-end deep learning. Of the three, this is the course I would most recommend.</p>
+</section>
+</section>
+<section id="reflections" class="level1">
+<h1>Reflections</h1>
+<p>Overall, my experience with the Deep Learning Specialization course has been highly rewarding. Initially, I was hesitant due to the course’s choice of TensorFlow as its Deep Learning framework, a selection that seemed unconventional given the rising popularity of PyTorch (the figures below speak for themselves)…</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://www.assemblyai.com/blog/pytorch-vs-tensorflow-in-2023/"><img src="pytorch_vs_tensorflow_pwc.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Percentage of repositories uploaded to paperswithcode.com, by Deep Learning framework"></a></p>
+<figcaption>Percentage of repositories uploaded to paperswithcode.com, by Deep Learning framework</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://www.assemblyai.com/blog/pytorch-vs-tensorflow-in-2023/"><img src="pytorch_vs_tensorflow_hugging_face.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Number of models uploaded to HuggingFace, by Deep Learning framework"></a></p>
+<figcaption>Number of models uploaded to HuggingFace, by Deep Learning framework</figcaption>
+</figure>
+</div>
+<p>However, my apprehensions were quickly allayed when I discovered that the majority of the work from the first three courses is entirely library-agnostic, carried out manually using vectors and matrices. Diving into the details and avoiding common abstractions when learning a subject can significantly enhance understanding, an approach that proved beneficial in this case. This hands-on, foundational approach is a significant advantage of this course, as it equips learners with a deep understanding before introducing them to powerful tools like TensorFlow or PyTorch.</p>
+<p>Moreover, Course 3, Structuring Machine Learning Projects, offered insights that I will carry forward not only when implementing Deep Learning models but also when executing any Machine Learning model. After nearly a decade of regular involvement in such projects, Ng’s recommendations on evaluating projects based on a blend of “optimizing” and “satisficing” metrics were particularly enlightening. Often, when working on a project for stakeholders, there are lengthy and complex discussions about which model is “best”. Numerous evaluation metrics are considered, each with varying degrees of importance, leading to debates about which model emerges as the “winner”. Ng’s pragmatic approach suggests agreeing in advance on a single metric to optimize and a list of metrics to “satisfice”. Examples of the latter could include prediction times, cost of retraining, or false negatives. The former could then be a single metric that, assuming all nuanced metrics from the “satisfice” list are met, you would ideally want to optimize. I have since experimented with this framework and have seen fantastic results.</p>
+<p>Lastly, as companies like Meta continue to release massive open-source networks such as Llama7B, an essential skill in the Deep Learning space will be the ability to adapt such models to one’s specific use case. Most companies lack the resources to train such a model and likely always will. The AI victors among the non-monopolistic businesses that constitute the bulk of the world’s economy will be those that can leverage these models effectively. Techniques like transfer learning and more niche methods, such as RAG for LLMs, come to mind. While Ng briefly covers these, I believe their importance is on the rise. More on that in Part 2.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="deep learning" data-listing-date-sort="1707696000000" data-listing-file-modified-sort="1707853603531" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1167">
-<div class="thumbnail">
-<p><a href="./posts/dl_course_part1/index.html" class="no-external"></a></p><a href="./posts/dl_course_part1/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/dl_course_part1/pytorch_vs_tensorflow_pwc.png" alt="Percentage of repositories uploaded to paperswithcode.com, by Deep Learning framework"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/dl_course_part1/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/dl_course_part1/index.html" class="no-external">Deep Learning Specialisation - Part 1</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/dl_course_part1/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('deep learning'); return false;">
-deep learning
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/dl_course_part1/index.html" class="no-external">A few months ago, I embarked on a quest to consolidate and extend my knowledge of Deep Learning. I was presented with a plethora of options, ranging from Ian Goodfellow’s…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/dl_course_part1/index.html" class="no-external">
-<div class="listing-date">
-Feb 12, 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="news" data-listing-date-sort="1676678400000" data-listing-file-modified-sort="1707853603531" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="294">
-<div class="thumbnail">
-<p><a href="./posts/welcome/index.html" class="no-external"></a></p><a href="./posts/welcome/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/welcome/thumbnail.jpg"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/welcome/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/welcome/index.html" class="no-external">Welcome To My Blog</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/welcome/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/welcome/index.html" class="no-external">Hello and welcome to my blog! The intention with this blog is both to provide an outlet for myself to consolidate my learning, and to share it with you in the hope that you…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/welcome/index.html" class="no-external">
-<div class="listing-date">
-Feb 18, 2023
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
