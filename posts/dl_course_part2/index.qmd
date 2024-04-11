@@ -1,80 +1,18 @@
 ---
-title: "Deep Learning Specialisation - Part 2"
-date: "2024-04-09"
+title: "Deep Learning Specialization course completed ✔️"
+date: "2024-04-11"
 categories: [deep learning]
 ---
-
-structure for the post/what messages do I want to get through?
-
--   this is post 2 of the series. I have just finished the course. I am very happy with it and would recommend it. these weeks take a little longer as the content is a bit more advanced
-
--   after the high level discussions on NN, optimisations, etc. it is nice to go very deep into the CNN and seq model stuff
-
--   what each course covers. List it out
-
--   course 1
-
-    -   \- convolutional neural networks built up from "first principles"/historical context e.g. Sobel filters etc.. cannot use FC layers, padding (valid vs same), stride, lots on dimensions of tensors/filters during convolutions, convolution + pooling + FC = CNN, POOLING layers, dims down + channels up = normal CNN, introduces Keras sequential API
-
-    -   week 2 = CNN examples: lenet digit classifier + alexnet image classifier + VGG, residual networks/skip connections to address vanishing/exploding gradients, inception network + inception module, computational hacks e.g. depth-wise separable convolution leading to mobilenet, data augmentation technoqies in CV/images e.g. mirroring, cropping, rotation, shearing, etc.
-
-    -   image classification vs image class w/ localization, landmark detection, convolutional implementtation of sliding window, YOLO, IoU, non-max suppression, regional CNN \> fast r CNN \> faster R cnn, semantic segmentation, UNet for segmentation (trnaspose convolution),
-
-    -   face verigication vs face recognition, similarity function, simaese network - facenet - w/ encoding vectors (similar to seq models), triplet loss, neural style transfer = convert image with same content to another style, Jcontent & Jstyle, use gradient descent to optimise pixel values rather than params,
-
--   course 2
-
-    -   sequence models applications, why not use FC layers?, recurrent NN archi (1-1, many-1, 1-many, etc), language model (probability of sentence) + sampling from it (generative AI), GRUs, LSTMs, bidirectional RNNs, one-hot encoded words in vocab,
-
-    -   word embedding for more informative encoding of words, transfer learning (take embeddings from online), analogies using embeddings, embedding matrix, learning it (train simple language model with E as param, word2vec, negative sampling, glove, sentiment classification, addressing bias (dwell on this),
-
-    -   sequence-to-sequence models ENCODE input, DECODE output, machine translation as working example, beam search (EZ), error analysis, BLEU score, attention model (is all you need), view attention weights, speech recognition & connectionist temporal classification, trigger word detection,
-
-    -   transformer network (paralellisation), self attention = attention-based representations for words, qkv, multi head atention mechanism, transformer with encoder and decoder. like a whole new type of computer
-
--   summary - great way to get the ball rolling. good mix of videos, readings, programming assignments, would recommend to anyone. as usual, its about getting curious and keeping it up. journey not a destination. tensorflow is not a huge issue - it is very high level uses of the API and personally, I am now transitioning to Pytorch (say its used at work or smth)weird glitches here and there. they could do better
-
--   
 
 *This is Part 2 of a two-part blog series (Part 1 can be found [here](https://www.akashastrub.com/posts/dl_course_part1/)).*
 
 # Introduction
 
-Having shared my initial thoughts on modules 1-3 of Andrew Ng's [Deep Learning Specialization course](https://www.coursera.org/specializations/deep-learning#credits) a few weeks back, I have now completed modules 4 and 5 and thus wrapped up the course. I will provide a more in-depth summary towards the end of this post, but it has been a wonderful learning experience overall, and couldn't recommend it enough. After covering the generalizable aspects of training Deep Learning networks in modules 1-3, modules 4 and 5 get a lot more specific and explore both Convolutional Neural Networks as well as Sequence Models in depth. As such, I've found these modules to take a little longer to get through than the initial sections, especially as if you want to get into the nuts & bolts of some of these architectures, some of the original academic papers might be worth reading. So, what do these modules cover?
+A few weeks ago, I shared my initial thoughts on the first three modules of Andrew Ng's [Deep Learning Specialization course](https://yzas-us.nneap-prd.pub.aws.novonordisk.com/s/5356c0ec69d5fdc25ff77/#0). Having now completed the entire course, including modules 4 and 5, I am now ready to offer a more comprehensive overview. My learning journey though these modules has been a wonderful experience overall, and I couldn't recommend it enough.
+
+Compared to the first three modules discussed in Part 1, the latter modules of the course, which focus on Convolutional Neural Networks (CNNs) and Sequence Models, delve into more specialized areas of Deep Learning. Unsurprisingly, these modules required a bit more time and effort, particularly if one wishes to explore the underlying architectures in detail. I often found that in order to truly grasp the intricacies, it was beneficial to consult some of the seminal academic papers referenced throughout the course. So, what do these two modules cover?
 
 # Course Content
-
-As a reminder, the Deep Learning Specialization is structured into five courses:
-
-1.  Neural Networks and Deep Learning
-2.  Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization
-3.  Structuring Machine Learning Projects
-4.  Convolutional Neural Networks
-5.  Sequence Models
-
-In this post, we will focus on modules 4 and 5. Convolutional Neural Networks (CNNs) and Sequence models are without a shadow of a doubt the two domains/neural net architecture types that have brought about the most value as of the time of writing. Think unlocking your phone with face recognition and Tesla's self-driving cars for CNNs. Think speech recognition, language translation, or LLMs for Sequence models - these architectures have had a tangible impact on our day to days in more ways than we can imagine. So, how does Ng introduce these models to the audience?
-
-### Course 4
-
-Course 4, *Convolutional Neural Networks*, builds up to today's most glamorous architectures starting from first principles and historical techniques, such as Sobel's filters. These filters are then "parameterised" and suddenly, you're exploring the details of CNNs such as padding, strides, pooling, and - of great value - tracking tensor dimensions at every step. In the second week, examples of architectures that have made a splash in the academic community, such as LeNet, AlexNet, and MobileNet are used to introduce new concepts, such as skip connections/residual networks, depth-wise separable convolution, and data augmentation techniques. The third week takes a similar approach, this time honing in on image classification, classification with localization, and segmentation techniques via networks such as YOLO, RegionalCNN, and UNet. Finally, the course ends with neural style transfer as well as face verification and recognition tasks. The final section introduces the audience to the concept of the "similarity vector" which makes for a great segway into the encoder-decoder models in the Sequence models in Course 5.
-
-### Course 5
-
-Course 5, *Sequence Models*, begins by introducing the Recurrent Neural Network (RNN) architecture, its bidirectional version, and then proceeds to set the scene for language models from the get-go (NLP is the main use case throughout this course). Gated Recurrent Units (GRUs) and Long Short Term Memory Units (LSTMs) are also presented as ways to address exploding and vanishing gradient problems. In week 2, the concept of word embedding is introduced together with techniques to train an embedding matrix **E** such as Word2Vec and GloVe. Ng does a great job emphasizing the importance of addressing bias when training a word embedding matrix and introduces some techniques in the context of gender de-biasing. Following this, weeks 3 and 4 use machine translation as a working example for the pivotal [attention model](https://arxiv.org/pdf/1706.03762.pdf). This is introduced at a high-level to start, but is quickly described in the context of self-attention to create attention-based representations for words. The multi-head attention mechanism is then introduced and wrapped up into the network that changed it all: the transformer. I enjoyed Ng's detailed explanation of the model, but for more context as to the impact this has had on the Deep Learning community, I found [Karpathy's discussion](https://www.bing.com/videos/riverview/relatedvideo?q=karpathy+transformer&mid=F813260904FCD075B4D2F813260904FCD075B4D2&FORM=VIRE) on the Lex Fridman podcast to be a lot more interesting.
-
-# Course Summary
-
-Much like in my original post on Ng's course, I can only emphasise how rewarding my experience with the Deep Learning Specialization course has been. It is an excellent mix of videos, readings, and programming assignments. I do recommend this course to anyone looking to learn more about Deep Learning. Whether, like me, you've worked in the field before but are looking for a more thorough overview, or if you're completely new to AI, this is a very comprehensive course that is worthy of your time. The minor issues such as what Deep Learning API to use can be ignored in favour of Ng's great teaching style. I, for one, will stick to PyTorch for my Deep Learning work given its increasing popularity (as well as the fact that it is what's most used with my peers). As always, this is just a stepping stone, not a destination. If you want to get even more into Deep Learning, it's worth getting your hands dirty in some value-creating projects, and reaping the benefits of all of the hard work required in taking this course. Onwards and upwards!
-
-ChatGPT version 1:
-
-# Course Completion: Deep Learning Specialization
-
-A few weeks ago, I shared my initial thoughts on the first three modules of Andrew Ng's Deep Learning Specialization course. Having now completed the entire course, including modules 4 and 5, I am ready to offer a more comprehensive overview. My journey through these modules has been both challenging and enlightening, and I wholeheartedly recommend this learning experience.
-
-The latter modules of the course, which focus on Convolutional Neural Networks (CNNs) and Sequence Models, delve into more specialized areas of Deep Learning. These modules required a bit more time and effort, particularly if one wishes to explore the underlying architectures in detail. To truly grasp the intricacies, I found it beneficial to consult some of the seminal academic papers referenced throughout the course.
-
-## Course Content
 
 To recap, the Deep Learning Specialization is divided into five courses:
 
@@ -88,18 +26,20 @@ To recap, the Deep Learning Specialization is divided into five courses:
 
 5.  Sequence Models
 
-In this post, I will concentrate on modules 4 and 5. CNNs and Sequence models are undoubtedly two of the most impactful areas in neural network architecture to date. They underpin technologies ranging from facial recognition for unlocking smartphones to Tesla's autonomous driving systems, and from speech recognition to language translation and large language models (LLMs).
+In this post, I will concentrate on modules 4 and 5. These are particularly exciting given CNNs and Sequence models are undoubtedly two of the most impactful domains in Deep Learning to date. CNNs, for example, underpin technologies ranging from unlocking your phone with facial recognition to Tesla's autonomous driving systems. Speech recognition, language translation, and large language models, on the other hand, represent some of the pivotal technologies coming from Sequence Models.
 
-### Course 4: Convolutional Neural Networks
+### Course 4
 
-Course 4 begins with foundational techniques, such as Sobel filters, and progresses to the mechanics of CNNs, including padding, strides, pooling, and dimensionality tracking. The course then explores landmark architectures like LeNet, AlexNet, and MobileNet, introducing concepts such as residual networks and depth-wise separable convolution. Image classification, localization, and segmentation are addressed through networks like YOLO, RegionalCNN, and UNet. The course concludes with neural style transfer and face verification, segueing nicely into encoder-decoder models discussed in the following module.
+Course 4, *Convolutional Neural Networks*, begins with historical techniques, such as Sobel filters, and progresses to the mechanics of CNNs, including padding, strides, pooling, and - of great value - tracking tensor's dimensions at every step. The course then explores landmark architectures like LeNet, AlexNet, and MobileNet, introducing concepts such as residual networks, depth-wise separable convolution, and data augmentation techniques. Image classification, localization, and segmentation are addressed through networks like YOLO, RegionalCNN, and UNet. The course concludes with neural style transfer and face verification, where "similarity vectors" are introduced, segueing nicely into encoder-decoder models discussed in the following module.
 
-### Course 5: Sequence Models
+### Course 5
 
-Course 5 introduces Recurrent Neural Networks (RNNs), their bidirectional counterparts, and sets the stage for language models, which are a recurring theme. GRUs and LSTMs are presented as solutions to the challenges of exploding and vanishing gradients. The course then covers word embeddings, with a focus on Word2Vec and GloVe, and addresses the important issue of bias in word embeddings. The latter weeks are devoted to machine translation and the attention model, culminating in a deep dive into the transformer architecture, which has revolutionized the field.
+Course 5, *Sequence Models*, introduces Recurrent Neural Networks (RNNs), their bidirectional counterparts in BRNNs, and sets the stage for language models, which are a recurring theme throughout. Gated Recurrent Units (GRUs) and Long Short Term Memory Units (LSTMs) are presented as solutions to the challenges of exploding and vanishing gradients. The course then covers word embeddings, with a focus on Word2Vec and GloVe as techniques to train embedding matrices, and addresses the important issue of bias in word embeddings in the context of gender de-biasing. The latter weeks are devoted to machine translation and the pivotal [attention model](https://yzas-us.nneap-prd.pub.aws.novonordisk.com/s/5356c0ec69d5fdc25ff77/#0), culminating in a deep dive into the transformer architecture, which has revolutionized the field. Ng provides a fantastic explanation for the model itself, but, given the course was recorded years ago, fails to describe the effect this has had on the Deep Learning research community. I found [Karpathy's discussion on the Lex Fridman podcast](https://www.youtube.com/watch?v=cdiD-9MMpb0) to be a valuable resource with regards to this.
 
-## Course Summary
+# Course Summary
 
-Reflecting on the entire Deep Learning Specialization, I can reaffirm the immense value it has provided. The course offers a rich blend of instructional videos, readings, and hands-on programming assignments. I advocate for this course to anyone eager to deepen their understanding of Deep Learning, whether they are seasoned practitioners seeking a structured overview or newcomers embarking on their AI journey.
+Reflecting on the entire Deep Learning Specialization, I can reaffirm the immense value it has provided for me. The course offers a rich blend of instructional videos, readings, and hands-on programming assignments. I advocate for this course to anyone eager to deepen their understanding of Deep Learning, whether they are seasoned practitioners seeking a structured overview or newcomers embarking on their AI journey. Ng provides a very comprehensive course, for a very reasonable price, that is worthy of your time.
 
-While minor debates such as the choice of Deep Learning API may arise, they pale in comparison to the quality of Ng's instruction. Personally, I will continue to use PyTorch for my Deep Learning endeavors due to its growing popularity and familiarity within my professional network. However, it's important to remember that completing this course is just one step in a continuous journey. To truly master Deep Learning, one must engage in practical, value-creating projects and build upon the foundational knowledge acquired through this course. Onwards and upwards!
+While minor debates such as the choice of TensorFlow over PyTorch may arise for this course (see my previous post), they pale in comparison to the quality of Ng's instruction. Personally, I will continue to use PyTorch for my Deep Learning work due to its growing popularity and familiarity within my professional network. What's important to remember, regardless of API choice, however, is that while this course provides a fantastic theoretical background for Deep Learning, the real "human" learning (sorry, I had to) is done via practical, value-adding projects leveraging this new-found knowledge. Still, it's always nice to get a certificate...
+
+![](Coursera DL image.PNG)

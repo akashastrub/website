@@ -1,8 +1,10 @@
 ---
-title: "Deep Learning Specialisation - Part 1"
+title: "Ng's Deep Learning Specialization - Part 1"
 date: "2024-02-12"
 categories: [deep learning]
 ---
+
+*This is Part 1 of a two-part blog series (Part 2 can be found [here](https://www.akashastrub.com/posts/dl_course_part2/)).*
 
 # Introduction
 
